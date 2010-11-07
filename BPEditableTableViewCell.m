@@ -26,7 +26,9 @@
 		control.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         
         [control addTarget:self action:@selector(valueChanged:) forControlEvents:UIControlEventValueChanged];
-        
+
+        self.selectionStyle = UITableViewCellSelectionStyleNone; // Better default for editable cells
+
 		[self.contentView addSubview:control];
 		[self setNeedsLayout];
 	}
